@@ -150,6 +150,15 @@ const yearEventMap = {
     2022: '12月14日: 首都高道路交通智能化系統全面啟用。',
 };
 
+function preloadImages(imageMap) {
+    Object.values(imageMap).forEach(imagePath => {
+        const img = new Image();
+        img.src = imagePath;
+    });
+}
+
+
+preloadImages(yearImageMap);
 
 document.addEventListener('DOMContentLoaded', function() {
 const slider = document.getElementById('yearSlider');
